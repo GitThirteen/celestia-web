@@ -1,11 +1,12 @@
 # CelestiaWeb
-The respository containing the source code of the website for the Discord bot "Celestia".<br>
+The respository containing the source code for the website of the Discord bot "Celestia".<br>
 Follow the steps below if you're interested in hosting the website locally.<br>
 <br>
 Frontend - Angular 12<br>
 Backend - Fastify & discordJS
 
-<strong>Disclaimer: Node.js 16.6.0 or newer is required!</strong> (or else discord.js is very likely going to break in the backend!)
+<strong>Disclaimer: Node.js 16.6.0 or newer is required!</strong> (or else discord.js is very likely going to break in the backend!)<br>
+If you only want to access the frontend, feel free to use an older version.
 
 ## Quick Start Guide
 1. Run `npm install` (or `yarn` if you use yarn) in both frontend and backend folder.
