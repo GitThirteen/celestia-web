@@ -1,5 +1,5 @@
 # CelestiaWeb
-The respository containing the source code for the website of the Discord bot "Celestia".<br>
+The repository containing the source code for the website of the Discord bot "Celestia".<br>
 Follow the steps below if you're interested in hosting the website locally.<br>
 <br>
 Frontend - Angular 12<br>
