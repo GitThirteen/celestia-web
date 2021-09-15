@@ -21,7 +21,7 @@ If you only want to access the frontend, feel free to use an older version.
 6. Run `curl http://localhost:8080`.
 
 #### Option 2 (Recommended for Windows)
-4. Write yourself a .bat script containg following lines:<br>
+4. Write yourself a .bat script containing following lines:<br>
 ```
 call npm run build
 node dist/server.js
