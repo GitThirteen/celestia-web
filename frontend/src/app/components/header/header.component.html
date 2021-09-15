@@ -1,0 +1,57 @@
+<div class="header" *ngIf="showHeader()">
+  <div class="menu-wrapper">
+    <div class="header-menu left" *ngIf="!compactMenu">
+      <div (click)="goTo('Guides')"><li class="header-item">GUIDES</li></div>
+      <div (click)="goTo('Library')"><li class="header-item">LIBRARY</li></div>
+      <div (click)="goTo('Commands')"><li class="header-item">COMMANDS</li></div>
+    </div>
+    <div class="unselectable logo">
+      <span class="text" routerLink="/home" routerLinkActive="active">Celestia</span>
+    </div>
+    <div class="header-menu right" *ngIf="!compactMenu">
+      <div (click)="goTo('FAQ')"><li class="header-item">FAQ</li></div>
+      <div (click)="goTo('Patchnotes')"><li class="header-item">PATCH NOTES</li></div>
+      <div (click)="goTo('Donate')"><li class="header-item special">DONATE</li></div>
+    </div>
+    <button class="menu-btn">
+      <i class="material-icons menu-icon" (click)="toggleCompactMenu()">menu</i>
+    </button>
+  </div>
+</div>
+
+<div class="compact-menu-wrapper" *ngIf="compactMenu" (window:resize)="onResize($event)">
+  <div class="compact-menu">
+    <a class="unselectable" routerLink="/home" routerLinkActive="active" (click)=toggleCompactMenu()>
+      <i class="material-icons navbar-menu-icon">home</i>
+      <span class="label">Home</span>
+    </a>
+    <a class="unselectable" (click)=toggleCompactMenu()>
+      <i class="material-icons navbar-menu-icon">close</i>
+      <span class="label">Close</span>
+    </a>
+    <a class="unselectable" (click)="goTo('Guides')">
+      <i class="material-icons navbar-menu-icon">book</i>
+      <span class="label">Guides</span>
+    </a>
+    <a class="unselectable" (click)="goTo('Library')">
+      <i class="material-icons navbar-menu-icon">label</i>
+      <span class="label">Library</span>
+    </a>
+    <a class="unselectable" (click)="goTo('Commands')">
+      <i class="material-icons navbar-menu-icon">keyboard</i>
+      <span class="label">Commands</span>
+    </a>
+    <a class="unselectable" (click)="goTo('FAQ')">
+      <i class="material-icons navbar-menu-icon">help_outline</i>
+      <span class="label">FAQ</span>
+    </a>
+    <a class="unselectable" (click)="goTo('Patchnotes')">
+      <i class="material-icons navbar-menu-icon">notes</i>
+      <span class="label">Patch Notes</span>
+    </a>
+    <a class="unselectable" (click)="goTo('Donate')">
+      <i class="material-icons navbar-menu-icon special">favorite</i>
+      <span class="label">Donate</span>
+    </a>
+  </div>
+</div>

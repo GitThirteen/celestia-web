@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es2017",
+      "noImplicitAny": true,
+      "moduleResolution": "node",
+      "allowJs": true,
+      "resolveJsonModule": true,
+      "downlevelIteration": true,
+      "forceConsistentCasingInFileNames": true,
+      "sourceMap": false,
+      "rootDir": "src",
+      "outDir": "dist",
+      "baseUrl": ".",
+      "paths": {
+          "*": [
+              "node_modules/*",
+              "src/types/*"
+          ]
+      },
+      "lib": [
+          "ES6",
+          "ES2015.Symbol",
+          "ES2015.Symbol.WellKnown",
+          "ES2016.Array.Include",
+          "ES2018.Promise",
+          "ES2018.RegExp"
+      ]
+  },
+  "include": [
+      "src/**/*"
+  ]
+}

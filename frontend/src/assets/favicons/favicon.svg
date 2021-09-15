@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="128" height="128"><svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+ <g id="SvgjsG1004">
+  <title>Layer 1</title>
+  <rect id="SvgjsRect1003" width="1" y="-19.5" x="-377.5" stroke="#000" fill="#ff221f"></rect>
+  <g id="SvgjsG1002">
+   <path id="SvgjsPath1001" d="m13.90754,13.49506l100.18628,0l-100.18628,100.926l0,-100.926z" stroke-width="0" stroke="#ff221f" fill="#201c1c"></path>
+   <path id="SvgjsPath1000" d="m13.93577,114.50711l0,-100.9924l100.11691,100.9924l-100.11691,0z" stroke-width="0" stroke="#ff221f" fill="#ff221f"></path>
+  </g>
+ </g>
+
+</svg><style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+</style></svg>

@@ -1,0 +1,46 @@
+$material-design-icons-font-directory-path: '~material-design-icons-iconfont/dist/fonts/';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chau+Philomene+One:ital@0;1&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+@import '~material-design-icons-iconfont/src/material-design-icons';
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto !important;
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.unselectable:before {
+  content: attr(data-unselectable);
+}
+
+// GLOBAL VARS
+:root {
+  --page-bg: url(assets/inspiration-geometry.png);
+  --page-coming-soon: url(assets/coming-soon.gif);
+
+  --color-red: #FF221F;
+  --color-grey: #2B2E32;
+  --color-darkergrey: #201C1C;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-gold: #FFD700;
+
+  --font-menu: 'Chau Philomene One', sans-serif;
+  --font-text: /*'Open Sans', sans-serif;*/ 'Glory', sans-serif;
+  --font-logo: /*'Caveat', cursive;*/ 'Kaushan Script', cursive;
+  --font-head: 'Montserrat', sans-serif;
+}
