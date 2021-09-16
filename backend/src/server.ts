@@ -1,6 +1,6 @@
 import Fastify, { FastifyInstance } from 'fastify';
 import { Server, IncomingMessage, ServerResponse } from 'http';
-import { dev } from './dtos/dev';
+import { discordUserData } from './dtos/discordUserData';
 import { ServiceLayer } from "./service";
 
 const server: FastifyInstance = Fastify({ });
@@ -11,9 +11,9 @@ server.register(require('fastify-cors'), {
     methods: ['GET']
 })
 
-server.get('/avatars', dev, async () => {
+server.get('/avatars', discordUserData, async () => {
     console.log(`GET: All avatars`);
-    return await service.getAvatars();
+    return await service.getUserData();
 });
 
 const start = async () => {

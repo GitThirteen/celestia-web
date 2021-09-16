@@ -1,24 +1,35 @@
 import { Client, Intents, User } from 'discord.js';
-import { Dev } from "./dtos/dev";
+import { DiscordUserData } from './dtos/discordUserData';
+import { Storage } from './storage';
+
 const ADMIN_IDS = process.env.ADMIN_IDS.split(';');
 const { DISCORD_BOT_TOKEN } = process.env;
 
 export class ServiceLayer {
-    bot = new DiscordBot();
+    private readonly bot = new DiscordBot();
+    private storage = Storage.get();
 
-    async getAvatars(): Promise<Dev[]> {
-        const avatars: Dev[] = [];
+    async getUserData(): Promise<DiscordUserData[]> {
+        if (!this.storage.userData || (Date.now() - this.storage.userData.timestamp) > 12 * 60 * 60 * 1000) {
+            this.storage.setUserData(await this.loadUserData());
+            return this.storage.userData.values;
+        }
+        return this.storage.userData.values;
+    }
+
+    private async loadUserData(): Promise<DiscordUserData[]> {
+        const data: DiscordUserData[] = [];
         const client = this.bot.discordClient;
 
         for (const ID of ADMIN_IDS) {
             const user = await client.users.fetch(ID);
-            avatars.push(ServiceLayer.mapToDev(user));
+            data.push(ServiceLayer.mapToDiscordUserData(user));
         }
 
-        return avatars;
+        return data;
     }
 
-    private static mapToDev(u: User): Dev {
+    private static mapToDiscordUserData(u: User): DiscordUserData {
         return {
             id: u.id,
             name: u.username,

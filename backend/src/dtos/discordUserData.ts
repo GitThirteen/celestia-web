@@ -1,6 +1,6 @@
 import { RouteShorthandOptions } from "fastify";
 
-export const dev: RouteShorthandOptions = {
+export const discordUserData: RouteShorthandOptions = {
     schema: {
         response: {
             200: {
@@ -19,9 +19,14 @@ export const dev: RouteShorthandOptions = {
     }
 }
 
-export interface Dev {
+export interface DiscordUserData {
     id: string;
     name?: string;
     discriminator?: string;
     avatarURL?: string;
+}
+
+export interface DiscordUserDataTimestamped {
+    timestamp: number,
+    values: DiscordUserData[]
 }
