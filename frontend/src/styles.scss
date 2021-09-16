@@ -7,26 +7,6 @@ $material-design-icons-font-directory-path: '~material-design-icons-iconfont/dis
 @import url('https://fonts.googleapis.com/css2?family=Glory:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import '~material-design-icons-iconfont/src/material-design-icons';
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0 auto !important;
-}
-
-.unselectable {
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.unselectable:before {
-  content: attr(data-unselectable);
-}
-
 // GLOBAL VARS
 :root {
   --page-bg: url(assets/inspiration-geometry.png);
@@ -43,4 +23,43 @@ body {
   --font-text: /*'Open Sans', sans-serif;*/ 'Glory', sans-serif;
   --font-logo: /*'Caveat', cursive;*/ 'Kaushan Script', cursive;
   --font-head: 'Montserrat', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto !important;
+}
+
+p, span {
+  font-family: var(--font-text);
+  color: var(--color-white);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-menu);
+  color: var(--color-white);
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 24px;
+
+  @media(min-width: 1200px) {
+    font-size: 30px;
+  }
+}
+
+.unselectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.unselectable:before {
+  content: attr(data-unselectable);
 }

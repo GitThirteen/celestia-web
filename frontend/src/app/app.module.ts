@@ -8,6 +8,7 @@ import { HomeComponent } from './components/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { DonationComponent } from './components/donation/donation.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FaqComponent } from './components/faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     NotFoundComponent,
     HomeComponent,
-    DonationComponent
+    DonationComponent,
+    FaqComponent
   ],
   imports: [
     BrowserModule,

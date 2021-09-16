@@ -16,3 +16,13 @@
     z-index: -1;
   }
 }
+
+.overlay {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  //width: 98%;
+  max-width: 1000px;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+}
