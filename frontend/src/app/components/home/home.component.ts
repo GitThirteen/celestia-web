@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DiscordService} from "../../services/discord.service";
-import {Dev} from '../../dtos/dev';
+import { DiscordService } from '../../services/discord.service';
+import { DiscordUserData } from '../../dtos/discordUserData';
 
 @Component({
   selector: 'app-home',
@@ -8,17 +8,15 @@ import {Dev} from '../../dtos/dev';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  avatars: Dev[] | undefined;
+  data: DiscordUserData[] | undefined;
 
   constructor(private discordService: DiscordService) { }
 
   ngOnInit(): void {
-    this.discordService.loadProfileImages().then(() => {
-      this.discordService.getProfileImage('All').subscribe(avatars => {
-        this.avatars = avatars;
-      }, error => {
-        console.error(error);
-      });
+    this.discordService.loadDiscordUserData().subscribe(data => {
+      this.data = data;
+    }, error => {
+      console.log(error);
     });
   }
 }

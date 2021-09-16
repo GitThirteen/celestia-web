@@ -1,4 +1,4 @@
-import {DiscordUserData, DiscordUserDataTimestamped} from "./dtos/discordUserData";
+import { DiscordUserData, DiscordUserDataTimestamped } from "./dtos/discordUserData";
 
 export class Storage {
     private static instance: Storage;

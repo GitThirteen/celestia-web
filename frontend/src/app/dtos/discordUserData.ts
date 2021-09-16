@@ -1,4 +1,4 @@
-export interface Dev {
+export interface DiscordUserData {
   id: string;
   name?: string;
   discriminator?: string;
