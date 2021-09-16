@@ -11,6 +11,7 @@ run.bat
 
 # misc
 src/config/config.json
+.env
 
 # IDEs and editors
 /.idea
