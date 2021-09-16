@@ -1,6 +1,6 @@
 import {Client, GuildMember, Intents, User} from 'discord.js';
 import { Dev } from "./dtos/dev";
-import { ADMIN_IDS, DISCORD_BOT_TOKEN, GUILD_ID } from './config/config.json';
+import { ADMIN_IDS, DISCORD_BOT_TOKEN } from './config/config.json';
 
 export class ServiceLayer {
     bot = new DiscordBot();
