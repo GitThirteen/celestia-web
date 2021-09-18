@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
 
 const SURPRISE_LINKS: string[] = [
   'https://youtu.be/Zd6pX3CeMRU?autoplay=1&cc_load_policy=1', // A↑ba↓ba→ba→ba↓ba↑ba↓ba↓ba↑ba→ba→ 10 Hours
@@ -22,6 +23,17 @@ const SURPRISE_LINKS: string[] = [
   'https://youtu.be/6E6G_W8cNN4?autoplay=1&cc_load_policy=1', // Let's talk about Marina (ORIGINAL POST)
 ];
 
+const NF_EMOJIS: string[] = [
+  '◑.◑',
+  '( ⚆ _ ⚆ )',
+  '（｀〇Д〇）',
+  '(O∆O)',
+  '（*/∇＼*）',
+  '(´･(´･(´･(´･(´･(´･д･`) ･`)･`)･`)･`)･`)',
+  '(⊙△⊙✿)',
+  '( p′︵‵。)'
+];
+
 @Component({
   selector: 'app-not-found',
   templateUrl: './not-found.component.html',
@@ -30,10 +42,12 @@ const SURPRISE_LINKS: string[] = [
 export class NotFoundComponent implements OnInit {
 
   constructor(
-    private router: Router
+    private router: Router,
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle(this.getRandomEmoji());
   }
 
   goToHome(): void {
@@ -43,5 +57,9 @@ export class NotFoundComponent implements OnInit {
   getSurprised(): void {
     const randomURL = SURPRISE_LINKS[Math.floor(Math.random() * SURPRISE_LINKS.length)];
     window.open(randomURL, '_blank');
+  }
+
+  private getRandomEmoji(): string {
+    return NF_EMOJIS[Math.floor(Math.random() * NF_EMOJIS.length)];
   }
 }

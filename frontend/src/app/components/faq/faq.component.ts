@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import faq from '../../../assets/questions/questions.json';
+import { Title } from '@angular/platform-browser';
 
 type Question = {
   category: string,
@@ -15,8 +16,9 @@ type Question = {
 export class FaqComponent implements OnInit {
   readonly questions: Question[] = faq.questions;
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit(): void {
+    this.titleService.setTitle('FAQ - Celestia');
   }
 }
