@@ -1,8 +1,58 @@
 {
   "questions": [
     {
-      "category": "A",
-      "question": "b",
+      "category": "GENERAL",
+      "question": "What is Celestia?",
+      "answer": "Humblebrag yuccie viral put a bird on it disrupt vinyl franzen truffaut meditation blog heirloom. Literally live-edge drinking vinegar, chambray flexitarian jianbing hashtag af fanny pack fashion axe shabby chic cold-pressed 90's organic pop-up."
+    },
+    {
+      "category": "GENERAL",
+      "question": "I have a great idea for the game, how can I tell you about it?",
+      "answer": "Ethical taiyaki hexagon leggings."
+    },
+    {
+      "category": "GENERAL",
+      "question": "I found a bug, how can I tell you about it?",
+      "answer": "Ethical taiyaki hexagon leggings."
+    },
+    {
+      "category": "GAMEPLAY",
+      "question": "Why does card XY not have a Unique/Special Ability?",
+      "answer": "Swag single-origin coffee four loko, coloring book forage authentic meggings cloud bread health goth 8-bit shaman disrupt intelligentsia."
+    },
+    {
+      "category": "DONATIONS",
+      "question": "Is there a way to support you?",
+      "answer": "Swag shabby chic pug, brooklyn stumptown man bun keytar YOLO glossier scenester vinyl subway tile gochujang poke fam."
+    },
+    {
+      "category": "DONATIONS",
+      "question": "What does a 'Donor' tag come with?",
+      "answer": "null"
+    },
+    {
+      "category": "DONATIONS",
+      "question": "Is it possible to gift someone a 'Donor' tag?",
+      "answer": "null"
+    },
+    {
+      "category": "DONATIONS",
+      "question": "I haven't received anything after donating, what should I do?",
+      "answer": "null"
+    },
+    {
+      "category": "DONATIONS",
+      "question": "I accidentally donated a wrong amount",
+      "answer": "null"
+    },
+    {
+      "category": "MISC",
+      "question": "How did you decide on the name?",
+      "answer": "null"
+    },
+    {
+      "category": "MISC",
+      "question": "I have a question that isn't listed here.",
       "answer": "null"
     }
   ]

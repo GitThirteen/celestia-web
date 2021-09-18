@@ -5,3 +5,47 @@
     text-align: center;
   }
 }
+
+.subtext {
+  opacity: 0.85;
+}
+
+.questions {
+  text-align: left;
+}
+
+.i-am-running-out-of-names {
+  margin-bottom: 1em;
+}
+
+.question-wrapper {
+  display: flex;
+  margin-bottom: 0.5em;
+
+  .index {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: var(--font-head);
+    color: var(--color-white);
+    opacity: 0.7;
+    width: 1.5em;
+    flex-grow: 0;
+    flex-shrink: 0;
+  }
+
+  .question {
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title {
+      font-family: var(--font-head);
+      font-weight: bolder;
+    }
+    .answer {
+      font-family: var(--font-text);
+      opacity: 0.7;
+    }
+  }
+}

@@ -14,11 +14,29 @@ type Question = {
   styleUrls: ['./faq.component.scss']
 })
 export class FaqComponent implements OnInit {
-  readonly questions: Question[] = faq.questions;
+  categories = ['GENERAL', 'GAMEPLAY', 'DONATIONS', 'MISC'];
+  questions: Map<string, Question[]>;
 
-  constructor(private titleService: Title) { }
+  private counter = 0;
+
+  constructor(private titleService: Title) {
+    this.questions = this.loadQuestions();
+  }
 
   ngOnInit(): void {
     this.titleService.setTitle('FAQ - Celestia');
+  }
+
+  loadQuestions(): Map<string, Question[]> {
+    const questions = new Map<string, Question[]>();
+    for (const category of this.categories) {
+      questions.set(category, faq.questions.filter(question => question.category.toLowerCase() === category.toLowerCase()));
+    }
+    return questions;
+  }
+
+  count(): number {
+    this.counter++;
+    return this.counter;
   }
 }

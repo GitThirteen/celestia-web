@@ -1,7 +1,16 @@
 <div class="wrapper">
   <h1>FREQUENTLY ASKED QUESTIONS</h1>
-  <p>Some of the more common questions we have received in the past summarized.</p>
-  <div class="questions" *ngFor="let question of questions; index as i">
-    {{i+1}} {{question.category}}
+  <p class="subtext">Some of the more common questions we have received in the past summarized.</p>
+  <div class="questions" *ngIf="questions">
+    <div class="i-am-running-out-of-names" *ngFor="let category of categories">
+      <h5>{{ category }}</h5>
+      <div class="question-wrapper" *ngFor="let question of questions.get(category)">
+        <div class="index">{{ count() }}</div>
+        <div class="question">
+          <div class="title">{{ question.question }}</div>
+          <div class="answer">{{ question.answer }}</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
