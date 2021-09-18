@@ -17,6 +17,7 @@ export class FaqComponent implements OnInit {
   categories = ['GENERAL', 'GAMEPLAY', 'DONATIONS', 'MISC'];
   questions: Map<string, Question[]>;
 
+  private elLength = 0;
   private counter = 0;
 
   constructor(private titleService: Title) {
@@ -30,12 +31,18 @@ export class FaqComponent implements OnInit {
   loadQuestions(): Map<string, Question[]> {
     const questions = new Map<string, Question[]>();
     for (const category of this.categories) {
-      questions.set(category, faq.questions.filter(question => question.category.toLowerCase() === category.toLowerCase()));
+      const array = faq.questions.filter(question => question.category.toLowerCase() === category.toLowerCase());
+      this.elLength += array.length;
+
+      questions.set(category, array);
     }
     return questions;
   }
 
   count(): number {
+    if (this.counter >= this.elLength) {
+      this.counter = 0;
+    }
     this.counter++;
     return this.counter;
   }
