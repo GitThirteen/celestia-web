@@ -9,6 +9,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { DonationComponent } from './components/donation/donation.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FaqComponent } from './components/faq/faq.component';
+import { LibraryPickerComponent } from './components/library-picker/library-picker.component';
+import { LibraryCharactersComponent } from './components/library-characters/library-characters.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { FaqComponent } from './components/faq/faq.component';
     NotFoundComponent,
     HomeComponent,
     DonationComponent,
-    FaqComponent
+    FaqComponent,
+    LibraryPickerComponent,
+    LibraryCharactersComponent
   ],
   imports: [
     BrowserModule,
