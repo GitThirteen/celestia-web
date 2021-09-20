@@ -11,6 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FaqComponent } from './components/faq/faq.component';
 import { LibraryPickerComponent } from './components/library-picker/library-picker.component';
 import { LibraryCharactersComponent } from './components/library-characters/library-characters.component';
+import { LibraryCompanionsComponent } from './components/library-companions/library-companions.component';
+import { LibraryStickersComponent } from './components/library-stickers/library-stickers.component';
+import { PatchnotesComponent } from './components/patchnotes/patchnotes.component';
+import { GuidesComponent } from './components/guides/guides.component';
+import { CommandsComponent } from './components/commands/commands.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +27,13 @@ import { LibraryCharactersComponent } from './components/library-characters/libr
     DonationComponent,
     FaqComponent,
     LibraryPickerComponent,
-    LibraryCharactersComponent
+    LibraryCharactersComponent,
+    LibraryCompanionsComponent,
+    LibraryStickersComponent,
+    PatchnotesComponent,
+    GuidesComponent,
+    CommandsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
