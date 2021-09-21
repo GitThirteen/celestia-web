@@ -5,29 +5,29 @@
     Click on one of the panels below to start the hunt for knowledge.
   </div>
   <div class="picker-wrapper">
-    <div class="library" (click)="goTo('Characters')">
+    <a class="library" routerLink="/library/characters" routerLinkActive="active">
       <div class="title-pillow">
         <div class="unselectable title">Characters</div>
       </div>
       <div class="image-container">
         <img src="../../../assets/images/library/cards.png" alt="image for cards library">
       </div>
-    </div>
-    <div class="library" (click)="goTo('Companions')">
+    </a>
+    <a class="library" routerLink="/library/companions" routerLinkActive="active">
       <div class="title-pillow">
         <div class="unselectable title">Companions</div>
       </div>
       <div class="image-container">
         <img src="../../../assets/images/library/companions.png" alt="image for cards library">
       </div>
-    </div>
-    <div class="library" (click)="goTo('Stickers')">
+    </a>
+    <a class="library" routerLink="/library/stickers" routerLinkActive="active">
       <div class="title-pillow">
         <div class="unselectable title">Stickers</div>
       </div>
       <div class="image-container">
         <img src="../../../assets/images/library/777985537230372874.png" alt="image for cards library">
       </div>
-    </div>
+    </a>
   </div>
 </div>

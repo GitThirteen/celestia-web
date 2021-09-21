@@ -22,9 +22,8 @@ export class HeaderComponent implements OnInit {
     return !this.router.url.includes('404');
   }
 
-  goTo(page: HeaderPage): void {
-    const site = page.toLowerCase();
-    this.router.navigate([site]).then(() => this.compactMenu = false);
+  goTo(page: HeaderPage): string {
+    return '/' + page.toLowerCase();
   }
 
   onResize(event: any): void {

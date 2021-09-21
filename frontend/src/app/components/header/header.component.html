@@ -1,17 +1,17 @@
 <div class="header" *ngIf="showHeader()">
   <div class="menu-wrapper">
     <div class="header-menu left" *ngIf="!compactMenu">
-      <div (click)="goTo('Guides')"><li class="header-item">GUIDES</li></div>
-      <div (click)="goTo('Library')"><li class="header-item">LIBRARY</li></div>
-      <div (click)="goTo('Commands')"><li class="header-item">COMMANDS</li></div>
+      <a [routerLink]="goTo('Guides')" routerLinkActive="active"><div class="header-item">GUIDES</div></a>
+      <a [routerLink]="goTo('Library')" routerLinkActive="active"><div class="header-item">LIBRARY</div></a>
+      <a [routerLink]="goTo('Commands')" routerLinkActive="active"><div class="header-item">COMMANDS</div></a>
     </div>
     <div class="unselectable logo">
-      <span class="text" routerLink="/home" routerLinkActive="active">Celestia</span>
+      <a class="text" routerLink="/home" routerLinkActive="active">Celestia</a>
     </div>
     <div class="header-menu right" *ngIf="!compactMenu">
-      <div (click)="goTo('FAQ')"><li class="header-item">FAQ</li></div>
-      <div (click)="goTo('Patchnotes')"><li class="header-item">PATCH NOTES</li></div>
-      <div (click)="goTo('Donate')"><li class="header-item special">DONATE</li></div>
+      <a [routerLink]="goTo('FAQ')" routerLinkActive="active"><div class="header-item">FAQ</div></a>
+      <a [routerLink]="goTo('Patchnotes')" routerLinkActive="active"><div class="header-item">PATCH NOTES</div></a>
+      <a [routerLink]="goTo('Donate')" routerLinkActive="active"><div class="header-item special">DONATE</div></a>
     </div>
     <button class="menu-btn">
       <i class="material-icons menu-icon" (click)="toggleCompactMenu()">menu</i>
@@ -21,7 +21,7 @@
 
 <div class="compact-menu-wrapper" *ngIf="compactMenu" (window:resize)="onResize($event)">
   <div class="compact-menu">
-    <a class="unselectable" routerLink="/home" routerLinkActive="active" (click)=toggleCompactMenu()>
+    <a class="unselectable" routerLink="/home" routerLinkActive="active" (click)="toggleCompactMenu()">
       <i class="material-icons navbar-menu-icon">home</i>
       <span class="label">Home</span>
     </a>
@@ -29,27 +29,27 @@
       <i class="material-icons navbar-menu-icon">close</i>
       <span class="label">Close</span>
     </a>
-    <a class="unselectable" (click)="goTo('Guides')">
+    <a class="unselectable" [routerLink]="goTo('Guides')" routerLinkActive="active" (click)="compactMenu = false">
       <i class="material-icons navbar-menu-icon">book</i>
       <span class="label">Guides</span>
     </a>
-    <a class="unselectable" (click)="goTo('Library')">
+    <a class="unselectable" [routerLink]="goTo('Library')" routerLinkActive="active" (click)="compactMenu = false">
       <i class="material-icons navbar-menu-icon">label</i>
       <span class="label">Library</span>
     </a>
-    <a class="unselectable" (click)="goTo('Commands')">
+    <a class="unselectable" [routerLink]="goTo('Commands')" routerLinkActive="active" (click)="compactMenu = false">
       <i class="material-icons navbar-menu-icon">keyboard</i>
       <span class="label">Commands</span>
     </a>
-    <a class="unselectable" (click)="goTo('FAQ')">
+    <a class="unselectable" [routerLink]="goTo('FAQ')" routerLinkActive="active" (click)="compactMenu = false">
       <i class="material-icons navbar-menu-icon">help_outline</i>
       <span class="label">FAQ</span>
     </a>
-    <a class="unselectable" (click)="goTo('Patchnotes')">
+    <a class="unselectable" [routerLink]="goTo('Patchnotes')" routerLinkActive="active" (click)="compactMenu = false">
       <i class="material-icons navbar-menu-icon">notes</i>
       <span class="label">Patch Notes</span>
     </a>
-    <a class="unselectable" (click)="goTo('Donate')">
+    <a class="unselectable" [routerLink]="goTo('Donate')" routerLinkActive="active" (click)="compactMenu = false">
       <i class="material-icons navbar-menu-icon special">favorite</i>
       <span class="label">Donate</span>
     </a>

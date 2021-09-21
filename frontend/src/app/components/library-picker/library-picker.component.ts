@@ -1,8 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router } from '@angular/router';
-
-type LibraryPage = 'Characters'|'Companions'|'Stickers';
 
 @Component({
   selector: 'app-library-picker',
@@ -12,17 +9,10 @@ type LibraryPage = 'Characters'|'Companions'|'Stickers';
 export class LibraryPickerComponent implements OnInit {
 
   constructor(
-    private titleService: Title,
-    private router: Router
+    private titleService: Title
   ) { }
 
   ngOnInit(): void {
     this.titleService.setTitle('Library - Celestia');
-  }
-
-  goTo(page: LibraryPage): void {
-    const path = this.router.url;
-    const dest = page.toLowerCase();
-    this.router.navigate([`${path}/${dest}`]);
   }
 }
