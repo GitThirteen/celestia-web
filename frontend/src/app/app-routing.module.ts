@@ -11,6 +11,8 @@ import { LibraryStickersComponent } from './components/library-stickers/library-
 import { PatchnotesComponent } from './components/patchnotes/patchnotes.component';
 import { GuidesComponent } from './components/guides/guides.component';
 import { CommandsComponent } from './components/commands/commands.component';
+import {TosComponent} from "./components/tos/tos.component";
+import {PrivacyPolicyComponent} from "./components/privacy-policy/privacy-policy.component";
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'patchnotes', component: PatchnotesComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'donate', component: DonationComponent },
+  { path: 'tos', component: TosComponent },
+  { path: 'privacy', component: PrivacyPolicyComponent },
   { path: '**', pathMatch: 'full', redirectTo: '404' },
   { path: '404', component: NotFoundComponent }
 ];

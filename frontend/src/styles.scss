@@ -23,6 +23,8 @@ $material-design-icons-font-directory-path: '~material-design-icons-iconfont/dis
   --font-text: /*'Open Sans', sans-serif;*/ 'Glory', sans-serif;
   --font-logo: /*'Caveat', cursive;*/ 'Kaushan Script', cursive;
   --font-head: 'Montserrat', sans-serif;
+
+  --discord-invite-link: "https://discordapp.com/oauth2/authorize?&client_id=504406400848625687&scope=bot&permissions=388160";
 }
 
 // Scrollbar styling & Misc
@@ -113,6 +115,15 @@ h1 {
 
   @media(min-width: 1200px) {
     font-size: 30px;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: inherit;
   }
 }
 

@@ -1,3 +1,33 @@
 <div class="footer" *ngIf="showFooter()">
-  <p>Test</p>
+  <div class="top">
+    <div class="menu">
+      <div class="unselectable title">Celestia</div>
+    </div>
+    <div class="menu">
+      <h5 class="unselectable">Navigation</h5>
+      <div class="footer-menu">
+        <div><a routerLink="/guides" routerLinkActive="active">Guides</a></div>
+        <div><a routerLink="/faq" routerLinkActive="active">FAQ</a></div>
+        <div><a routerLink="/library" routerLinkActive="active">Library</a></div>
+        <div><a routerLink="/patchnotes" routerLinkActive="active">Patch Notes</a></div>
+        <div><a routerLink="/commands" routerLinkActive="active">Commands</a></div>
+        <div><a routerLink="/donate" routerLinkActive="active">Donate</a></div>
+      </div>
+    </div>
+  </div>
+  <hr class="line">
+  <div class="bottom">
+    <div class="pseudo"></div> <!-- Pseudo Div so space-between works as intended -->
+    <div class="bottom-wrapper">
+      <div class="tos-menu">
+        <a class="item" routerLink="/tos" routerLinkActive="active">Terms of Service</a>
+        <b>·</b>
+        <a class="item" routerLink="/privacy" routerLinkActive="active">Privacy Policy</a>
+      </div>
+      <p>Copyright © 2019-{{getCurrentYear()}} Celestia. All Rights Reserved.</p>
+    </div>
+    <div class="socials">
+      <a class="icon" [href]="gitHubRepo" target="_blank" rel="noopener noreferrer"><img [src]="gitHubPath" alt="github icon"></a>
+    </div>
+  </div>
 </div>

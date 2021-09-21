@@ -17,6 +17,8 @@ import { PatchnotesComponent } from './components/patchnotes/patchnotes.componen
 import { GuidesComponent } from './components/guides/guides.component';
 import { CommandsComponent } from './components/commands/commands.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TosComponent } from './components/tos/tos.component';
+import { PrivacyPolicyComponent } from './components/privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { FooterComponent } from './components/footer/footer.component';
     PatchnotesComponent,
     GuidesComponent,
     CommandsComponent,
-    FooterComponent
+    FooterComponent,
+    TosComponent,
+    PrivacyPolicyComponent,
   ],
   imports: [
     BrowserModule,
