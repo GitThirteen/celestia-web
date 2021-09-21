@@ -7,6 +7,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./library-picker.component.scss']
 })
 export class LibraryPickerComponent implements OnInit {
+  readonly assetsPath = '../../../assets/images/library';
 
   constructor(
     private titleService: Title
