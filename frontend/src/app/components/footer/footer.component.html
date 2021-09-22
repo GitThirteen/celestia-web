@@ -1,18 +1,15 @@
 <div class="footer" *ngIf="showFooter()">
   <div class="top">
-    <div class="menu">
+    <div class="logo">
       <div class="unselectable title">Celestia</div>
     </div>
-    <div class="menu">
-      <h5 class="unselectable">Navigation</h5>
-      <div class="footer-menu">
-        <div><a routerLink="/guides" routerLinkActive="active">Guides</a></div>
-        <div><a routerLink="/faq" routerLinkActive="active">FAQ</a></div>
-        <div><a routerLink="/library" routerLinkActive="active">Library</a></div>
-        <div><a routerLink="/patchnotes" routerLinkActive="active">Patch Notes</a></div>
-        <div><a routerLink="/commands" routerLinkActive="active">Commands</a></div>
-        <div><a routerLink="/donate" routerLinkActive="active">Donate</a></div>
-      </div>
+    <div class="footer-menu">
+      <div><a routerLink="/guides" routerLinkActive="active">Guides</a></div>
+      <div><a routerLink="/library" routerLinkActive="active">Library</a></div>
+      <div><a routerLink="/commands" routerLinkActive="active">Commands</a></div>
+      <div><a routerLink="/faq" routerLinkActive="active">FAQ</a></div>
+      <div><a routerLink="/patchnotes" routerLinkActive="active">Patch Notes</a></div>
+      <div><a routerLink="/donate" routerLinkActive="active">Donate</a></div>
     </div>
   </div>
   <hr class="line">
@@ -24,7 +21,7 @@
         <b>·</b>
         <a class="item" routerLink="/privacy" routerLinkActive="active">Privacy Policy</a>
       </div>
-      <p>Copyright © 2019-{{getCurrentYear()}} Celestia. All Rights Reserved.</p>
+      <p>Copyright © 2019-{{getCurrentYear()}} Celestia. <span class="show-when-small">All Rights Reserved.</span></p>
     </div>
     <div class="socials">
       <a class="icon" [href]="gitHubRepo" target="_blank" rel="noopener noreferrer"><img [src]="gitHubPath" alt="github icon"></a>
