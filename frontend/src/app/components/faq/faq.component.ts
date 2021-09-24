@@ -47,16 +47,26 @@ export class FaqComponent implements OnInit {
   }
 
   format(text: string, index: number): string {
-    if (text.includes('$')) {
+    if (text.includes('$*')) {
       const fs = this.stringSplit(text);
+      const answer = document.getElementById('answer_' + index);
 
       switch (fs.magic) {
         case 'code': {
-          const answer = document.getElementById('answer_' + index);
-          if (answer) { answer.innerHTML = `${fs.first} <span style="background-color: black">${fs.format}</span>${fs.second}`; }
+          if (answer) { answer.innerHTML = `${fs.first} <span style="background-color: black; border-radius: 5px; padding: 2px">${fs.format}</span>${fs.second}`; }
           break;
         }
-        default: console.log('yeet');
+        case 'break': {
+          if (answer) { answer.innerHTML = `${fs.first}<br>${fs.second}`; }
+          break;
+        }
+        case 'bold': {
+          if (answer) { answer.innerHTML = `${fs.first} <b>${fs.format}</b>${fs.second}`; }
+          break;
+        }
+        default: {
+          console.error(`Unrecognized magic word ${fs.magic}.`);
+        }
       }
     }
 
@@ -72,7 +82,7 @@ export class FaqComponent implements OnInit {
   }
 
   private stringSplit(text: string): AltString {
-    const firSeg = text.split('$');
+    const firSeg = text.split('$*');
     const secSeg = (text.split('{').pop() as string).split('}');
 
     return {

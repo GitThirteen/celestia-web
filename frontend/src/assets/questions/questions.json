@@ -8,22 +8,22 @@
     {
       "category": "GENERAL",
       "question": "I have a great idea for the game, how can I tell you about it?",
-      "answer": "Awesome! Please use the in-game command $code${/celestia contact suggest}. In order to file a suggestion, you must be at least Rank 5."
+      "answer": "Awesome! Please use the in-game command $*code$*{/celestia contact suggest}. In order to file a suggestion, you must be at least Rank 5."
     },
     {
       "category": "GENERAL",
       "question": "I found a bug, how can I tell you about it?",
-      "answer": "Please use the in-game command $code${/celestia contact report} and follow the instructions in your DMs. In order to file a report, you must be at least Rank 5."
+      "answer": "Please use the in-game command $*code$*{/celestia contact report} and follow the instructions in your DMs. In order to file a report, you must be at least Rank 5."
     },
     {
       "category": "GAMEPLAY",
       "question": "Why does card XY not have a Unique/Special Ability?",
-      "answer": "Swag single-origin coffee four loko, coloring book forage authentic meggings cloud bread health goth 8-bit shaman disrupt intelligentsia."
+      "answer": "When creating new cards, we try to design the skill-set as close to their actual abilities as possible. The occasional creative off-tracking aside, we try to avoid adding abilities we aren't 100% comfortable with. While that might sound a bit anticlimactic, please take into consideration that we revisit \"older\" cards once in a while and see if we can rework them (changing/adding abilities, adjusting stats, etc.) so they fit into the current state of play. If you think there is a character that got robbed of their full potential nonetheless, feel free to send us a suggestion."
     },
     {
       "category": "DONATIONS",
       "question": "Is there a way to support you?",
-      "answer": "Swag shabby chic pug, brooklyn stumptown man bun keytar YOLO glossier scenester vinyl subway tile gochujang poke fam."
+      "answer": "Yes! You can support us by telling more people about Celestia! Please also consider donating so we can cover the maintenance and hosting costs for Celestia and this website. As a small thank you, every person donating $*bold$*{$5 and above} receives an in-game 'Donor' tag on their profile."
     },
     {
       "category": "DONATIONS",
