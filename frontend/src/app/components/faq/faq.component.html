@@ -8,7 +8,7 @@
         <div class="index">{{ count() }}</div>
         <div class="question">
           <div class="title">{{ question.question }}</div>
-          <div class="answer">{{ question.answer }}</div>
+          <div class="answer" [attr.id]="'answer_' + counter">{{ format(question.answer, counter) }}</div>
         </div>
       </div>
     </div>
