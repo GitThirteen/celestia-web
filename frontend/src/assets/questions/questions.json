@@ -3,17 +3,17 @@
     {
       "category": "GENERAL",
       "question": "What is Celestia?",
-      "answer": "Humblebrag yuccie viral put a bird on it disrupt vinyl franzen truffaut meditation blog heirloom. Literally live-edge drinking vinegar, chambray flexitarian jianbing hashtag af fanny pack fashion axe shabby chic cold-pressed 90's organic pop-up."
+      "answer": "Celestia is primarily an Anime Trading Card Game with an RPG inspired battle system for your Discord server. Collect your favorite characters, level them up, and fight with them in various PvE and PvP gamemodes. (Also, why does everyone keep asking \"What is Celestia\", but no one's asking \"How is Celestia\"...)"
     },
     {
       "category": "GENERAL",
       "question": "I have a great idea for the game, how can I tell you about it?",
-      "answer": "Ethical taiyaki hexagon leggings."
+      "answer": "Awesome! Please use the in-game command $code${/celestia contact suggest}. In order to file a suggestion, you must be at least Rank 5."
     },
     {
       "category": "GENERAL",
       "question": "I found a bug, how can I tell you about it?",
-      "answer": "Ethical taiyaki hexagon leggings."
+      "answer": "Please use the in-game command $code${/celestia contact report} and follow the instructions in your DMs. In order to file a report, you must be at least Rank 5."
     },
     {
       "category": "GAMEPLAY",
@@ -42,18 +42,18 @@
     },
     {
       "category": "DONATIONS",
-      "question": "I accidentally donated a wrong amount",
-      "answer": "null"
+      "question": "Can I get a refund?",
+      "answer": "Yes, you can! If you have accidentally donated the wrong amount or want to cancel your donation for any other reason, contact us within 48h after making that donation via emailhere[at]email.com. We'll get in touch with you for further procedure."
     },
     {
       "category": "MISC",
       "question": "How did you decide on the name?",
-      "answer": "null"
+      "answer": "Truth to be told, we were looking for a cute cards-related profile picture for Celestia's Discord client and stumbled across an artwork of Celestia holding a card in her hand. Call it love at first sight, call it we-didn't-look-any-further-because-we're-lazy, but we just decided to go with it."
     },
     {
       "category": "MISC",
       "question": "I have a question that isn't listed here.",
-      "answer": "null"
+      "answer": "Shoot us a DM on Discord, we'll try to reply as fast as possible. For serious inquiries, please use our email: emailhere[at]email.com"
     }
   ]
 }
