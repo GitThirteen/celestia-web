@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import faq from '../../../assets/questions/questions.json';
-import { Title } from '@angular/platform-browser';
+import {DomSanitizer, SafeHtml, Title} from '@angular/platform-browser';
 
 type Question = {
   category: string,
@@ -16,11 +16,14 @@ type Question = {
 export class FaqComponent implements OnInit {
   categories = ['GENERAL', 'GAMEPLAY', 'DONATIONS', 'MISC'];
   questions: Map<string, Question[]>;
-  counter = 0;
 
+  private counter = 0;
   private elLength = 0;
 
-  constructor(private titleService: Title) {
+  constructor(
+    private titleService: Title,
+    private sanitizer: DomSanitizer
+  ) {
     this.questions = this.loadQuestions();
   }
 
@@ -28,24 +31,8 @@ export class FaqComponent implements OnInit {
     this.titleService.setTitle('FAQ - Celestia');
   }
 
-  loadQuestions(): Map<string, Question[]> {
-    const questions = new Map<string, Question[]>();
-    for (const category of this.categories) {
-      const array = faq.questions.filter(question => question.category.toLowerCase() === category.toLowerCase());
-      this.elLength += array.length;
-
-      questions.set(category, array);
-    }
-    return questions;
-  }
-
-  format(text: string, index: number): string {
-    const answer = document.getElementById('answer_' + index);
-    if (!answer) {
-      console.error(`Failed parsing answer with ID 'answer_${index}'.`);
-      return text;
-    }
-
+  format(text: string): SafeHtml {
+    // **bold** text
     const bold = text.match(/\*\*[^*].*\*\*/g);
     if (bold) {
       for (const seg of bold) {
@@ -54,6 +41,7 @@ export class FaqComponent implements OnInit {
       }
     }
 
+    // ```code segment```
     const code = text.match(/```[^`].*```/g);
     if (code) {
       for (const seg of code) {
@@ -62,7 +50,8 @@ export class FaqComponent implements OnInit {
       }
     }
 
-    const lineBreak = text.match(/>{3}/g);
+    // ```<br> break```
+    const lineBreak = text.match(/<br>/g);
     if (lineBreak) {
       for (const seg of lineBreak) {
         const value = `<br>`;
@@ -70,6 +59,7 @@ export class FaqComponent implements OnInit {
       }
     }
 
+    // ||spoiler|| text
     const spoiler = text.match(/\|\|[^|].*\|\|/g);
     if (spoiler) {
       for (const seg of spoiler) {
@@ -78,8 +68,7 @@ export class FaqComponent implements OnInit {
       }
     }
 
-    answer.innerHTML = text;
-    return text;
+    return this.sanitizer.bypassSecurityTrustHtml(text);
   }
 
   count(): number {
@@ -88,5 +77,16 @@ export class FaqComponent implements OnInit {
     }
     this.counter++;
     return this.counter;
+  }
+
+  private loadQuestions(): Map<string, Question[]> {
+    const questions = new Map<string, Question[]>();
+    for (const category of this.categories) {
+      const array = faq.questions.filter(question => question.category.toLowerCase() === category.toLowerCase());
+      this.elLength += array.length;
+
+      questions.set(category, array);
+    }
+    return questions;
   }
 }
