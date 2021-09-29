@@ -9,11 +9,16 @@ import { Observable, of } from 'rxjs';
 })
 export class DiscordService {
   private baseUri: string = this.globals.backendUri;
+  private readonly _invite = 'https://discordapp.com/oauth2/authorize?&client_id=504406400848625687&scope=bot&permissions=388160';
 
   constructor(
     private globals: Globals,
     private http: HttpClient
   ) { }
+
+  get invite(): string {
+    return this._invite;
+  }
 
   loadDiscordUserData(): Observable<DiscordUserData[]> {
     if (!sessionStorage.getItem('userData')) {

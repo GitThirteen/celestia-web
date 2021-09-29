@@ -28,7 +28,7 @@
 
   display: inline-flex;
   align-items: center;
-  flex-grow: 1;
+  flex: 1 1 0px; // keep px for IE
 
   .header-item {
     font-family: var(--font-menu);
@@ -63,10 +63,10 @@
     justify-content: flex-start;
   }
 
-  flex-grow: 3;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1 1 0px; // keep px for IE
 
   .text {
     font-family: var(--font-logo);

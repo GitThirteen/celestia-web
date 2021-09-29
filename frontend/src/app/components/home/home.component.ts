@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { DiscordService } from '../../services/discord.service';
 import { DiscordUserData } from '../../dtos/discordUserData';
-import {Title} from "@angular/platform-browser";
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -9,11 +9,11 @@ import {Title} from "@angular/platform-browser";
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  data: DiscordUserData[] | undefined;
+  data: DiscordUserData[] = [];
 
   constructor(
     private discordService: DiscordService,
-    private titleService: Title
+    private titleService: Title,
   ) { }
 
   ngOnInit(): void {
@@ -23,5 +23,9 @@ export class HomeComponent implements OnInit {
     }, error => {
       console.log(error);
     });
+  }
+
+  goToInvite(): void {
+    window.open(this.discordService.invite, '_blank');
   }
 }

@@ -1,5 +1,53 @@
-<div class="bg">
-  <div class="overlay">
-    <div class="celestia-title"></div>
+<div class="homepage">
+  <div class="top-part-wrapper">
+    <div *ngIf="data && data.length !== 0">
+      <img class="unselectable celestia-image" [src]="data[0].avatarURL" alt="celestia profile image">
+    </div>
+    <div class="sub-header">
+      An Anime Trading Card Bot For Your Discord Server
+    </div>
+    <button class="discord-invite" (click)="goToInvite()">Invite To Discord</button>
   </div>
+  <div class="about">
+    <h2 class="unselectable">ABOUT</h2>
+      <div class="about-wrapper">
+        <div class="segment regular">
+          <div class="about-text">
+            <h3>COLLECT your waifus</h3>
+            <p>
+              Pull from over <b>600+ waifus and husbandos</b> with unique abilities, skins and reaction lines!
+              Raise their affinity and marry them to unlock various bonuses that will aid you in battle.
+            </p>
+          </div>
+          <div class="unselectable about-gif">Gif Placeholder</div>
+        </div>
+        <div class="segment reverse">
+          <div class="about-text">
+            <h3>FIGHT with your waifus</h3>
+            <p>
+              Poke literally gentrify chambray. Farm-to-table labore chia man braid deserunt tempor literally church-key. Pug
+              edison bulb tousled, swag pinterest mlkshk jean shorts vice laborum chambray waistcoat subway tile selvage ad.
+              Intelligentsia deserunt skateboard minim irony cold-pressed asymmetrical four loko air plant laboris magna hashtag iPhone.
+              Kombucha enamel pin blog, edison bulb tacos woke sint plaid street art. Pitchfork typewriter cillum palo santo,
+              hella tousled green juice meditation cliche nostrud cold-pressed kale chips tumblr. Poutine waistcoat ex celiac nostrud,
+              scenester mollit deserunt umami sartorial keytar you probably haven't heard of them yuccie palo santo.
+            </p>
+          </div>
+          <div class="unselectable about-gif">Gif Placeholder</div>
+        </div>
+        <div class="segment regular">
+          <div class="about-text">
+            <h3>LEVEL your waifus</h3>
+            <p>
+              Dummy text? More like dummy thicc text, amirite?<br>
+              Ea polaroid heirloom waistcoat vegan pop-up. Qui pug squid ugh bespoke organic, veniam kitsch farm-to-table four
+              loko. Marfa austin hashtag chambray succulents do. Four loko kale chips hella excepteur twee. 8-bit bicycle rights
+              echo park chia ea edison bulb cray paleo four loko meh messenger bag brunch. Adipisicing wolf et fingerstache gochujang,
+              sed photo booth. Meditation seitan live-edge kitsch blog kale chips ennui gentrify aute.
+            </p>
+          </div>
+          <div class="unselectable about-gif">Gif Placeholder</div>
+        </div>
+      </div>
+    </div>
 </div>
